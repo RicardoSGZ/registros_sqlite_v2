@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    margin: 0;
+    background-color: blue;
+}
+header{
+    background: linear-gradient(white, lightgrey);
+    background-color: lightgrey;
+    padding: 5px;
+    cursor: pointer;
+}
+header h1{
+    padding: 0;
+    margin: 0;
+    color: rgb(100,100,100);
+    font-weight: lighter;
+}
+h1 small{
+    font-size: 12pt;
+    margin-left: 5px;
+}
+main{
+    margin: 10px;
+    overflow: hidden;
+}
+section{
+    width: 100%;
+    overflow: hidden;
+}
+#intro{
+    padding-top: 10px;
+}
+#div_file, #div_createtable{
+    margin: auto;
+    width: 50%;
+}
+#archivo{
+    font-size: 11pt; 
+    float: left;
+    margin-bottom: 10px;
+}
+#btn_createtable{
+    border: 1px solid white;
+    background-color: lightgray;
+    font-size: 15pt;
+}
+#cat_crea, #tipos_crea{
+    float:left;
+}
+#cat_crea{
+    width: 65%;
+}
+
+.cr_field, select{
+    float:left;
+    clear:left;
+}
+.cr_field{
+    width: 90%;
+}
+select{
+    padding-bottom: 4px;
+}
+#btn_createtable2{
+    font-size: 12pt;
+    clear: left;
+    float: left;
+}
+#div_add, #div_refresh{
+    float: left;
+    margin-top: 5px;
+}
+#div_add, #div_refresh{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12pt;
+    display: none;
+    cursor: pointer;
+}
+#img_add{
+    margin-right: 5px;
+}
+#btn_add, #btn_refresh{
+    border: none;
+    background-color: white;
+}
+#btn_search{
+    width: 70%;
+    float: left;
+    clear: left;
+    display: none;
+    margin-top: 10px;
+}
+#busq{
+    background-image: url('imagenes/search.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+#numero{
+    font-size: 11pt;
+    margin-bottom: 0;
+    font-style: italic;
+    margin-top: 25px;
+}
+section#tabla{
+    width: 100%;
+    overflow-x: auto;
+    font-size: 10pt;
+    margin-top: 30px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th,td{
+    border-bottom: 1px solid lightblue;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+th{
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+}
+th:hover{
+    color: blue;
+}
+/*th span{
+    margin-left: 2px;
+}*/
+td{
+    color: blue;
+    text-align: center;
+    cursor: pointer;
+}
+td div{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 75px;
+    text-overflow: ellipsis;
+}
+td:first-child{
+    display: flex;
+}
+td:nth-child(2) div{
+    width: 200px;
+    text-align: left;
+}
+tr:nth-child(even){
+    background-color: rgb(245,245,245);
+}
+tr:hover{
+    background-color: rgb(180, 180, 255);
+}
+tr:first-child:hover{
+    background-color: white;
+}
+#iconos{
+    margin-left: 6px;
+    padding-top: 2px;
+    width: 100%;
+    cursor: pointer;
+
+}
+#iconos img{
+    margin-right: 8px;
+}
+/* SECCIÓN AÑADIR/MODIFICAR REGISTRO*/
+#add_mod_section{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+#add_mod_section label{
+    float:left;
+    clear: left;
+    font-size: 10pt;
+}
+#add_mod_section textarea, 
+#add_mod_section button,
+#add_mod_section .fecha,
+#add_mod_section .hora
+{
+    clear: left;
+    float: left;
+}
+#add_mod_section textarea{
+    width: 100%;
+}
+#add_mod_section button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13pt;
+}
+#img_principal, #img_sc1, #img_sc2{
+    width: 90%;
+    padding:2px;
+    border: 1px solid grey;
+}
+@media (min-width: 576px){
+    #btn_createtable{
+        font-size: 20pt;
+    }
+    #cat_crea{
+        width: 30%;
+    }
+    #archivo{
+        font-size: 15pt; 
+    }
+    #btn_search{
+        width: 20%;
+        float: right;
+        clear: none;
+        margin-top: 0;
+    }
+    #div_add, #div_refresh{
+        font-size: inherit;
+    }
+    /* SECCION AÑADIR/MODIFICAR REGISTRO*/
+    #add_mod_section{
+        margin-left: inherit;
+        margin-right: inherit;
+    }
+    #div_campos textarea{
+        width: 100%;
+    }
+    #div_campos, #div_imagenes{
+        width: 45%;
+        float: left;
+        margin-right: 2%;
+    }
+    #img_sc1, #img_sc2{
+        width: 50%;
+    }
+}

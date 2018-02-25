@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="author" content="Ricardo Sanz"/>
+        <meta name="theme-color" content="#90caf9"/>
+        <link rel="icon" sizes="192x192" href="recursos/imagenes/favicon.png"/>
+        <link rel="stylesheet" href="recursos/estilo.css"/>
+        <title>Registros</title>
+    </head>
+    <body id='up'>
+        <header>
+            <h1>Registros<small>versión 2018</small></h1>
+        </header>
+        <main>
+            <section id='intro'>
+                <div id='div_file'>
+                    <input type='file' id='archivo'/>
+                </div>
+                <div id='div_createtable'>
+                    <button id='btn_createtable'>Crear tabla</button>
+                </div>
+            </section>
+            <section>
+                <div id='div_add'>
+                    <img id='btn_add'src='recursos/imagenes/add.png' alt='Añadir'/>
+                    <span>Añadir registro</span>
+                </div>
+                <div id='div_refresh'>
+                    <img id='btn_refresh'src='recursos/imagenes/refresh.png' alt='Actualizar'/>
+                    <span>Actualizar/reiniciar tabla</span>
+                </div>
+                <div id='btn_search'>
+                    <input type='text' id='busq' placeholder='Pulsar Intro para buscar...'/>
+                </div>
+            </section>
+            <p id="numero"></p> 
+            <section id="tabla">
+            </section>
+            <section id='add_mod_section'>
+            </section>
+        </main>
+        <script src='recursos/sql.js'></script>
+        <script src='recursos/script.js'></script>
+    </body>
+</html>
