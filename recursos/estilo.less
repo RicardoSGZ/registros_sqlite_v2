@@ -1,0 +1,255 @@
+@fuente: 14pt;
+@fuente-xs: @fuente*0.7;
+@fuente-s: @fuente*0.8;
+@fuente-m: @fuente*1.1;
+@fuente-l: @fuente*1.43;
+.azul(){
+    color: blue;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: @fuente;
+    margin: 0;
+    background-color: blue;
+}
+header{
+    background: linear-gradient(white, lightgrey);
+    background-color: lightgrey;
+    padding: 5px;
+    cursor: pointer;
+    h1{
+        padding: 0;
+        margin: 0;
+        color: rgb(100,100,100);
+        font-weight: lighter;
+        small{
+            font-size: @fuente-s;
+            margin-left: 5px;
+        }
+    }
+}
+main{
+    margin: 10px;
+    overflow: hidden;
+}
+section{
+    width: 100%;
+    overflow: hidden;
+}
+#intro{
+    padding-top: 10px;
+}
+#div_file, #div_createtable{
+    margin: auto;
+    width: 50%;
+}
+#archivo{
+    font-size: @fuente-xs; 
+    float: left;
+    margin-bottom: 10px;
+    @media (min-width: 576px){
+        font-size: @fuente-m; 
+    }
+}
+#btn_createtable{
+    border: 1px solid white;
+    background-color: lightgray;
+    font-size: @fuente-m;
+    @media (min-width: 576px){
+        font-size: @fuente-l;
+    }
+}
+#cat_crea, #tipos_crea{
+    float:left;
+}
+#cat_crea{
+    width: 65%;
+    @media (min-width: 576px){
+        width: 30%;
+    }
+}
+.cr_field, select{
+    float:left;
+    clear:left;
+}
+.cr_field{
+    width: 90%;
+}
+select{
+    padding-bottom: 4px;
+}
+#btn_createtable2{
+    font-size: @fuente-s;
+    clear: left;
+    float: left;
+}
+#div_add, #div_refresh{
+    float: left;
+    margin-top: 5px;
+}
+#div_add, #div_refresh{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: @fuente-s;
+    display: none;
+    cursor: pointer;
+    @media (min-width: 576px){
+        font-size: inherit;
+    }
+}
+#img_add{
+    margin-right: 5px;
+}
+#btn_add, #btn_refresh{
+    border: none;
+    background-color: white;
+}
+#btn_search{
+    width: 70%;
+    float: left;
+    clear: left;
+    display: none;
+    margin-top: 10px;
+    @media (min-width: 576px){
+        width: 20%;
+        float: right;
+        clear: none;
+        margin-top: 0;
+    }
+}
+#busq{
+    background-image: url('imagenes/search.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+#numero{
+    font-size: @fuente;
+    margin-bottom: 0;
+    font-style: italic;
+    margin-top: 25px;
+}
+section#tabla{
+    width: 100%;
+    overflow-x: auto;
+    font-size: @fuente-s;
+    margin-top: 30px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th,td{
+    border-bottom: 1px solid lightblue;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+th{
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    &:hover{
+        .azul;
+    }
+}
+td{
+    .azul;
+    text-align: center;
+    cursor: pointer;
+    div{
+        white-space: nowrap;
+        overflow: hidden;
+        width: 75px;
+        text-overflow: ellipsis;
+    }
+    &:first-child{
+        display: flex;
+    }
+    &:nth-child(2){
+        div{
+            width: 200px;
+            text-align: left;
+        }
+    } 
+}
+tr{
+    &:nth-child(even){
+        background-color: rgb(245,245,245);
+    }
+    &:hover{
+        background-color: rgb(180, 180, 255);
+    }
+    &:first-child:hover{
+        background-color: white;
+    }
+}
+#iconos{
+    margin-left: 6px;
+    padding-top: 2px;
+    width: 100%;
+    cursor: pointer;
+    img{
+        margin-right: 8px;
+    }
+}
+
+/* SECCIÓN AÑADIR/MODIFICAR REGISTRO*/
+#add_mod_section{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    @media (min-width: 576px){
+        margin-left: inherit;
+        margin-right: inherit;
+    }
+    label{
+        float:left;
+        clear: left;
+        font-size: @fuente-xs;
+    }
+    textarea, 
+    button,
+    .fecha,
+    .hora
+    {
+        clear: left;
+        float: left;
+    }
+    textarea{
+        width: 100%;
+        @media (min-width: 576px){
+            width: 100%;
+        }
+    }
+    button{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: @fuente-s;
+    }
+}
+[id*='img_']{
+    width: 90%;
+    padding:2px;
+    border: 1px solid grey;
+}
+#div_imagenes{
+    float:left;
+}
+#div_campos, #div_imagenes{
+    @media (min-width: 576px){
+        width: 45%;
+        float: left;
+        margin-right: 2%;
+    }
+}
+[id*='img_sc']{
+    @media (min-width: 576px){
+        width: 50%;
+    }
+}

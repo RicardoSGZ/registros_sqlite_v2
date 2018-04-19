@@ -83,7 +83,7 @@ document.getElementById("btn_createtable").addEventListener("click", function ()
         db.run(sql_crt_cats_ins);
         sql_crt_cats_ins = "INSERT INTO categorias ('full_name', 'db_name') VALUES ('Imagen 3', 'img_sc2')";
         db.run(sql_crt_cats_ins);
-        sql_crt += ", 'img_pr' varchar(100), 'img_sc1' varchar(100), 'img_sc2' varchar(100))";
+        sql_crt += ", 'img_pr' varchar(100), 'img_sc1' varchar(100), 'img_sc2' varchar(100), 'img_sc3' varchar(100))";
         db.run(sql_crt);
         alert("Tabla creada");
         var binaryArray = db.export();
@@ -317,6 +317,16 @@ function editar(id){
             enlace_img_sc2.appendChild(imagen_sc2);
             div_imagenes.appendChild(enlace_img_sc2);
         }
+        if(fila['img_sc3'] != ''){
+            var imagen_sc3 = document.createElement('img');
+            var enlace_img_sc3 = document.createElement('a');
+            imagen_sc3.setAttribute('src', fila['img_sc3']);
+            enlace_img_sc3.setAttribute('href', fila['img_sc3']);
+            enlace_img_sc3.setAttribute('target', '_blank');
+            imagen_sc3.setAttribute('id', 'img_sc3');
+            enlace_img_sc3.appendChild(imagen_sc3);
+            div_imagenes.appendChild(enlace_img_sc3);
+        }
         document.getElementById('add_mod_section').appendChild(div_imagenes);
     }
     document.getElementById('add_mod_section').getElementsByTagName('button')[0].addEventListener('click', function(){
@@ -403,6 +413,7 @@ archivo_sel.addEventListener('change', function(){
         document.getElementsByTagName('header')[0].addEventListener('click', function(){
             document.getElementById('add_mod_section').innerHTML='';
             document.getElementById('tabla').style.display='block';
+            document.getElementById('numero').style.display='block';
             document.getElementById('add_mod_section').style.display='none';
         });
         //FIN VOLVER A INICIO

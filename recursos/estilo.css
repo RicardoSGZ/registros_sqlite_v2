@@ -1,243 +1,264 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14pt;
-    margin: 0;
-    background-color: blue;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  margin: 0;
+  background-color: blue;
 }
-header{
-    background: linear-gradient(white, lightgrey);
-    background-color: lightgrey;
-    padding: 5px;
-    cursor: pointer;
+header {
+  background: linear-gradient(#ffffff, #d3d3d3);
+  background-color: lightgrey;
+  padding: 5px;
+  cursor: pointer;
 }
-header h1{
-    padding: 0;
-    margin: 0;
-    color: rgb(100,100,100);
-    font-weight: lighter;
+header h1 {
+  padding: 0;
+  margin: 0;
+  color: #646464;
+  font-weight: lighter;
 }
-h1 small{
-    font-size: 12pt;
-    margin-left: 5px;
+header h1 small {
+  font-size: 11.2pt;
+  margin-left: 5px;
 }
-main{
-    margin: 10px;
-    overflow: hidden;
+main {
+  margin: 10px;
+  overflow: hidden;
 }
-section{
-    width: 100%;
-    overflow: hidden;
+section {
+  width: 100%;
+  overflow: hidden;
 }
-#intro{
-    padding-top: 10px;
+#intro {
+  padding-top: 10px;
 }
-#div_file, #div_createtable{
-    margin: auto;
-    width: 50%;
+#div_file,
+#div_createtable {
+  margin: auto;
+  width: 50%;
 }
-#archivo{
-    font-size: 11pt; 
-    float: left;
-    margin-bottom: 10px;
+#archivo {
+  font-size: 9.8pt;
+  float: left;
+  margin-bottom: 10px;
 }
-#btn_createtable{
-    border: 1px solid white;
-    background-color: lightgray;
-    font-size: 15pt;
+@media (min-width: 576px) {
+  #archivo {
+    font-size: 15.4pt;
+  }
 }
-#cat_crea, #tipos_crea{
-    float:left;
+#btn_createtable {
+  border: 1px solid white;
+  background-color: lightgray;
+  font-size: 15.4pt;
 }
-#cat_crea{
-    width: 65%;
+@media (min-width: 576px) {
+  #btn_createtable {
+    font-size: 20.02pt;
+  }
 }
-
-.cr_field, select{
-    float:left;
-    clear:left;
+#cat_crea,
+#tipos_crea {
+  float: left;
 }
-.cr_field{
-    width: 90%;
+#cat_crea {
+  width: 65%;
 }
-select{
-    padding-bottom: 4px;
+@media (min-width: 576px) {
+  #cat_crea {
+    width: 30%;
+  }
 }
-#btn_createtable2{
-    font-size: 12pt;
-    clear: left;
-    float: left;
+.cr_field,
+select {
+  float: left;
+  clear: left;
 }
-#div_add, #div_refresh{
-    float: left;
-    margin-top: 5px;
+.cr_field {
+  width: 90%;
 }
-#div_add, #div_refresh{
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 12pt;
-    display: none;
-    cursor: pointer;
+select {
+  padding-bottom: 4px;
 }
-#img_add{
-    margin-right: 5px;
+#btn_createtable2 {
+  font-size: 11.2pt;
+  clear: left;
+  float: left;
 }
-#btn_add, #btn_refresh{
-    border: none;
-    background-color: white;
+#div_add,
+#div_refresh {
+  float: left;
+  margin-top: 5px;
 }
-#btn_search{
-    width: 70%;
-    float: left;
-    clear: left;
-    display: none;
-    margin-top: 10px;
+#div_add,
+#div_refresh {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 11.2pt;
+  display: none;
+  cursor: pointer;
 }
-#busq{
-    background-image: url('imagenes/search.png');
-    background-position: right;
-    background-repeat: no-repeat;
-    border: 1px solid grey;
-    width: 100%;
-    padding-top: 2px;
-    padding-bottom: 2px;
+@media (min-width: 576px) {
+  #div_add,
+  #div_refresh {
+    font-size: inherit;
+  }
 }
-#numero{
-    font-size: 11pt;
-    margin-bottom: 0;
-    font-style: italic;
-    margin-top: 25px;
+#img_add {
+  margin-right: 5px;
 }
-section#tabla{
-    width: 100%;
-    overflow-x: auto;
-    font-size: 10pt;
-    margin-top: 30px;
+#btn_add,
+#btn_refresh {
+  border: none;
+  background-color: white;
 }
-table{
-    border-collapse: collapse;
-    width: 100%;
+#btn_search {
+  width: 70%;
+  float: left;
+  clear: left;
+  display: none;
+  margin-top: 10px;
 }
-th,td{
-    border-bottom: 1px solid lightblue;
-    padding-left: 2px;
-    padding-right: 2px;
+@media (min-width: 576px) {
+  #btn_search {
+    width: 20%;
+    float: right;
+    clear: none;
+    margin-top: 0;
+  }
 }
-th{
-    color: rgb(50, 50, 50);
-    cursor: pointer;
+#busq {
+  background-image: url('imagenes/search.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  border: 1px solid grey;
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
-th:hover{
-    color: blue;
+#numero {
+  font-size: 14pt;
+  margin-bottom: 0;
+  font-style: italic;
+  margin-top: 25px;
 }
-/*th span{
-    margin-left: 2px;
-}*/
-td{
-    color: blue;
-    text-align: center;
-    cursor: pointer;
+section#tabla {
+  width: 100%;
+  overflow-x: auto;
+  font-size: 11.2pt;
+  margin-top: 30px;
 }
-td div{
-    white-space: nowrap;
-    overflow: hidden;
-    width: 75px;
-    text-overflow: ellipsis;
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
-td:first-child{
-    display: flex;
+th,
+td {
+  border-bottom: 1px solid lightblue;
+  padding-left: 2px;
+  padding-right: 2px;
 }
-td:nth-child(2) div{
-    width: 200px;
-    text-align: left;
+th {
+  color: #323232;
+  cursor: pointer;
 }
-tr:nth-child(even){
-    background-color: rgb(245,245,245);
+th:hover {
+  color: blue;
 }
-tr:hover{
-    background-color: rgb(180, 180, 255);
+td {
+  color: blue;
+  text-align: center;
+  cursor: pointer;
 }
-tr:first-child:hover{
-    background-color: white;
+td div {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 75px;
+  text-overflow: ellipsis;
 }
-#iconos{
-    margin-left: 6px;
-    padding-top: 2px;
-    width: 100%;
-    cursor: pointer;
-
+td:first-child {
+  display: flex;
 }
-#iconos img{
-    margin-right: 8px;
+td:nth-child(2) div {
+  width: 200px;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+tr:hover {
+  background-color: #b4b4ff;
+}
+tr:first-child:hover {
+  background-color: white;
+}
+#iconos {
+  margin-left: 6px;
+  padding-top: 2px;
+  width: 100%;
+  cursor: pointer;
+}
+#iconos img {
+  margin-right: 8px;
 }
 /* SECCIÓN AÑADIR/MODIFICAR REGISTRO*/
-#add_mod_section{
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
+#add_mod_section {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
 }
-#add_mod_section label{
-    float:left;
-    clear: left;
-    font-size: 10pt;
+@media (min-width: 576px) {
+  #add_mod_section {
+    margin-left: inherit;
+    margin-right: inherit;
+  }
 }
-#add_mod_section textarea, 
+#add_mod_section label {
+  float: left;
+  clear: left;
+  font-size: 9.8pt;
+}
+#add_mod_section textarea,
 #add_mod_section button,
 #add_mod_section .fecha,
-#add_mod_section .hora
-{
-    clear: left;
-    float: left;
+#add_mod_section .hora {
+  clear: left;
+  float: left;
 }
-#add_mod_section textarea{
+#add_mod_section textarea {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  #add_mod_section textarea {
     width: 100%;
+  }
 }
-#add_mod_section button{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 13pt;
+#add_mod_section button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 11.2pt;
 }
-#img_principal, #img_sc1, #img_sc2{
-    width: 90%;
-    padding:2px;
-    border: 1px solid grey;
+[id*='img_'] {
+  width: 90%;
+  padding: 2px;
+  border: 1px solid grey;
 }
-@media (min-width: 576px){
-    #btn_createtable{
-        font-size: 20pt;
-    }
-    #cat_crea{
-        width: 30%;
-    }
-    #archivo{
-        font-size: 15pt; 
-    }
-    #btn_search{
-        width: 20%;
-        float: right;
-        clear: none;
-        margin-top: 0;
-    }
-    #div_add, #div_refresh{
-        font-size: inherit;
-    }
-    /* SECCION AÑADIR/MODIFICAR REGISTRO*/
-    #add_mod_section{
-        margin-left: inherit;
-        margin-right: inherit;
-    }
-    #div_campos textarea{
-        width: 100%;
-    }
-    #div_campos, #div_imagenes{
-        width: 45%;
-        float: left;
-        margin-right: 2%;
-    }
-    #img_sc1, #img_sc2{
-        width: 50%;
-    }
+#div_imagenes {
+  float: left;
+}
+@media (min-width: 576px) {
+  #div_campos,
+  #div_imagenes {
+    width: 45%;
+    float: left;
+    margin-right: 2%;
+  }
+}
+@media (min-width: 576px) {
+  [id*='img_sc'] {
+    width: 50%;
+  }
 }
